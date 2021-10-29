@@ -1,6 +1,6 @@
 // import logo from "./logo.svg";
 import "./App.scss";
-import Header from "./header";
+import Header from "./headercomponent/header";
 
 function App() {
   return (
