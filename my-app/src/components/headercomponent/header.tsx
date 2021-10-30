@@ -16,7 +16,7 @@ const Header = () => {
         <div className={styles.header_container}>
           <div className="logo">
             <img
-              src={require('./../shared/assets/bosta_logo.svg').default}
+              src={require('./../../shared/assets/bosta_logo.svg').default}
               alt="logo"
             />
           </div>

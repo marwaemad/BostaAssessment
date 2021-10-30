@@ -1,0 +1,27 @@
+.progressBar {
+    &_accomplished {
+        &__label {
+            position: absolute;
+            top: 3rem;
+            color: black;
+        }
+        &__reason {
+            position: absolute;
+            top: 6rem;
+            width: max-content;
+        }
+    }
+    &_label {
+        position: absolute;
+        top: 4rem;
+        color: black;
+    }
+
+    &_icon {
+        width: 30px;
+        height: auto;
+    }
+}
+.RSPBprogression {
+    width: 100%;
+}

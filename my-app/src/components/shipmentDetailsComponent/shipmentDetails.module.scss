@@ -1,0 +1,101 @@
+.shipementDetails {
+    display: flex;
+    &__tracking {
+        display: flex;
+        flex-basis: 45em;
+        margin: 0 5rem 0 0;
+        flex-direction: column;
+        h2 {
+            font-size: 20px;
+        }
+
+        &_container {
+            border: 1px solid #eae6e6;
+            border-radius: 5px;
+            flex-wrap: wrap;
+            
+        }
+        &_header,
+        &_body {
+            display: flex;
+            flex-basis: 50em;
+
+            ul {
+                display: inline-flex;
+                align-content: space-between;
+                align-items: center;
+                flex-wrap: nowrap;
+                flex-direction: row;
+                width: 100%;
+                padding: 0;
+                list-style: none;
+                text-align: left;
+                justify-content: space-around;
+                li {
+                    word-wrap: break-word;
+                    flex-basis: 10em;
+                }
+            }
+        }
+        &_header {
+            background-color: #ccc5c587;
+            font-family: "Cairo-SemiBold";
+            ul{
+                font-size: 17px;
+                color: #808080e8;
+                padding: 0 10px;
+            }
+        }
+        &_body {
+            display: flex;
+            flex-direction: column;
+            .trackingContent {
+                border-bottom: 1px solid #eae6e6;
+                flex-direction: column;
+                padding: 0 5px;
+            }
+        }
+    }
+    &__address {
+        flex-direction: column;
+        flex-basis: 27em;
+        h2 {
+            font-size: 20px;
+        }
+        &_container {
+            border: 1px solid #eae6e6;
+            border-radius: 5px;
+            background-color: #ccc5c587;
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        &_report {
+            border: 1px solid #ccc5c587;
+            border-radius: 5px;
+            padding: 30px;
+            display: flex;
+            .help {
+                &_title {
+                    font-size: 17px;
+                    color: black;
+                    font-family: "Cairo-SemiBold";
+                }
+                &_btn {
+                    border: none;
+                    background-color: red;
+                    border-radius: 5px;
+                    padding: 5px 10px;
+                    color: white;
+                    font-family: "Cairo-Regular";
+                }
+                &_img {
+                    width: 100px;
+                    height: auto;
+                    display: flex;
+                    align-items: center;
+                    flex: 1;
+                }
+            }
+        }
+    }
+}
