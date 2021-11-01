@@ -1,14 +1,25 @@
 import React, { useState } from "react";
 import { BiSearch, BiChevronUp, BiChevronDown } from "react-icons/bi";
 import styles from './header.module.scss';
-
+import { getShipmentTrackingData, getShipmentTrackingDataSuccess } from '../../shared/redux/actions';
+import { useDispatch } from "react-redux";
 const Header = () => {
+  const dispatch = useDispatch();
+  const [trackingNumber, setTrackingNumber] = useState("");
+  const [showTrackingPopup, setshowTrackingPopup] = useState(false);
 
-  const [trackingNumber, setTrackingNumber] = useState<string>("");
-  const [showTrackingPopup, setshowTrackingPopup] = useState<boolean>(false);
-  const getTrackingNumber = (e: React.FormEvent<HTMLFormElement>) => {
+  const getTrackingNumber = (e) => {
     e.preventDefault();
-    alert('hi')
+    dispatch(getShipmentTrackingData(trackingNumber))
+    fetch(`https://tracking.bosta.co/shipments/track/${trackingNumber}`, {
+      method: "get"
+    })
+      .then(res => res.json()
+
+      ).then(response => {
+        dispatch(getShipmentTrackingDataSuccess(response))
+        setshowTrackingPopup(false)
+      })
   }
   return (
     <header className="App-header">
